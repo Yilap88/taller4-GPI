@@ -48,7 +48,7 @@ print("Predicciones:", predicciones)
 
 # CREAMOS GRÁFICO
 # Graficar los datos originales
-plt.scatter(X, y, color='yellow', label='Datos reales')
+plt.scatter(X, y, color='red', label='Datos reales')
 
 # Graficar la recta de regresión
 plt.plot(X_test, predicciones, color='red', label='Recta de regresión')
