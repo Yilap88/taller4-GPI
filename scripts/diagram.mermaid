@@ -1,0 +1,32 @@
+graph LR
+    subgraph Grupo1["Fase 1 - Infraestructura"]
+        A[Environment.yml] --> D[Repositorio Github Taller]
+        B[Runall.ps1] --> D
+        C[Estructura de directorios] --> D
+
+    end
+    subgraph Grupo2["Fase 2 - Simulación"]
+        direction LR
+        H{Código} --> F[Creación Data sintética]
+    end
+    subgraph Grupo3["Fase 3 - Análisis"]
+        subgraph Modelos
+        direction BT
+        F --> J["Modelos de regresión lineal"]
+        I{Código} --> J
+        end
+        subgraph Evaluación
+        direction BT
+        J --> K["Evaluación de predicción
+        MSE
+        MAE
+        "]
+        L{Código} --> K
+        end
+    end
+    subgraph Grupo4["Fase 4 - Visualización"]
+        J --> M[Gráfica de Regresión Lineal]
+        K --> N[Tabla de parámetros de evaluación de predicción]
+        M --> D
+        N --> D
+    end
